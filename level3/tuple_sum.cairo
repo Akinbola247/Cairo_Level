@@ -1,6 +1,4 @@
 use debug::PrintTrait;
-use traits::TryInto;
-use option::OptionTrait;
 
 fn main() {
     let tup = (500, 6, 8, 12); 
