@@ -9,8 +9,9 @@ fn print_odd_multiples(n: u32, m: u32) {
         if numbers == 0{
             break;
         }
-        if check % 2 == 0 {
+        if count % 2 == 0 {
             numbers = numbers - 1;
+            count += 1;
             continue;
         }
         check.print();
@@ -20,5 +21,5 @@ fn print_odd_multiples(n: u32, m: u32) {
 } 
 
 fn main(){
-    print_odd_multiples(20,17);
+    print_odd_multiples(20,5);
 }
