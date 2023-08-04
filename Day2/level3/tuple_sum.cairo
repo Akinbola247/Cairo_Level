@@ -1,5 +1,6 @@
 use debug::PrintTrait;
 
+
 fn main() {
     let tup = (500, 6, 8, 12); 
     let (w, x, y, z) = tup;
