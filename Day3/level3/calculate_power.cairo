@@ -1,7 +1,4 @@
 use debug::PrintTrait;
-use traits::TryInto;
-use option::OptionTrait;
-
 
 fn calculate_Power(base: u32, mut exp: u32) -> u32 {
     if exp == 0 {
