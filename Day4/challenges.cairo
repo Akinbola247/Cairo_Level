@@ -1,5 +1,8 @@
 use debug::PrintTrait;
 use array::ArrayTrait;
+use option::OptionTrait;
+use box::BoxTrait;
+use traits::Into;
 
 fn createArray() {
     let mut arr = ArrayTrait::new();
@@ -16,11 +19,22 @@ enum Data {
     Tuple: (u32, u32),
 }
 
-fn DataArray() {
+fn DataArray() -> Data {
     let mut data_array: Array<Data> = ArrayTrait::new();
     data_array.append(Data::Integer(100));
     data_array.append(Data::Felt('hello'));
     data_array.append(Data::Tuple((10, 30)));
+
+    match data_array.get(1) {
+        Option::Some(x) => {
+            *x.unbox()
+        },
+        Option::None(_) => {
+             let mut data = ArrayTrait::new();
+            data.append('out of bounds');
+            panic(data)
+        },
+    }
 }
 
 fn main () {
